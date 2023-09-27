@@ -27,20 +27,6 @@ target_include_directories(${PROJECT_NAME}
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
-get_property(inclds
-    TARGET ${PROJECT_NAME}
-    PROPERTY INCLUDE_DIRECTORIES
-)
-message(STATUS "Listing include directories for ${PROJECT_NAME}...")
-foreach(pth ${inclds})
-    message(STATUS "  ${pth}")
-endforeach()
-string(JOIN "\n" includeDirectories ${inclds})
-file(GENERATE
-    OUTPUT "${CMAKE_BINARY_DIR}/include-directories.txt"
-    CONTENT ${includeDirectories}
-)
-
 set(public_headers
     src/Encoder_Lib.h
 )
