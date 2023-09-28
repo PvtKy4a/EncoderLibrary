@@ -7,18 +7,18 @@
 
 #include "Encoder_Lib.h"
 
-#define ENC_INITIAL_STATE       0x3
-#define ENC_ERROR_STATE         0x0
-#define ENC_RIGHT_STATE         0x1
-#define ENC_LEFT_STATE          0x2
-#define ENC_HOLD_RIGHT_STATE    0x4
-#define ENC_HOLD_LEFT_STATE     0x8
-#define ENC_BTN_CLICK_STATE     0x10
-#define ENC_BTN_HOLD_STATE      0x20
+#define ENC_INITIAL_STATE       	0x3
+#define ENC_ERROR_STATE         	0x0
+#define ENC_RIGHT_STATE         	0x1
+#define ENC_LEFT_STATE          	0x2
+#define ENC_HOLD_RIGHT_STATE    	0x4
+#define ENC_HOLD_LEFT_STATE     	0x8
+#define ENC_BTN_CLICK_STATE     	0x10
+#define ENC_BTN_HOLD_STATE      	0x20
 
-#define ENC_HOLD_OFFSET 0x2
+#define ENC_HOLD_OFFSET 			0x2
 
-#define ENC_BTN_DEBOUNCE_TIME_MS 50
+#define ENC_BTN_DEBOUNCE_TIME_MS 	50
 
 void init_encoder(Encoder_t *encoder,
 				  read_encoder_callback_t read_encoder_function,
